@@ -8,11 +8,13 @@ include("model.php")
 <body>
 
     <?php
-    $txt = "Welcome there this is my first post here";
+    $txt = "Welcome There This Is My First Post Here";
 
     echo changeFirstCharState($txt, "lower");
     echo "<br>";
     echo repeatStringText("Hello", 5, "**");
+    echo "<br>";
+    echo convertStrToLowerCase($txt)
 
     ?>
 

@@ -34,3 +34,29 @@ function repeatStringText($text, $num, $spacer = " ")
         return "$txt $spacer $txt $spacer $txt $spacer";
     }
 }
+
+function convertStrToLowerCase($text)
+{
+    $txtLen = strlen($text);
+    if (empty($text)) {
+        return "<h2>Please Make Sure You Enter The Text</h2>";
+    } else if (!empty($text)) {
+        for ($i = 0; $i < $txtLen; $i++) {
+            $text[$i]  = strtolower($text[$i]);
+        }
+        return $text;
+    }
+}
+
+function convertStrToUpperCase($text)
+{
+    $txtLen = strlen($text);
+    if (empty($text)) {
+        return "<h2>Please Make Sure You Enter The Text</h2>";
+    } else if (!empty($text)) {
+        for ($i = 0; $i < $txtLen - 1; $i++) {
+            $text[$i]  = strtoupper($text[$i]);
+        }
+        return $text;
+    }
+}
