@@ -16,22 +16,20 @@ function  changeFirstCharState($text, $fun): string
 }
 
 //function to repeat string 
-function repeatStringText($text, $num, $spacer = " ")
+function repeatStringText(string $text, int $repeat = 3, string $spacer = " ")
 {
     $txt = "";
     if (empty($text)) {
         return "<h2>Please Make Sure You Enter The Text</h2>";
-    } else if (!empty($text) && $num != 0) {
-        for ($i = 0; $i < $num; $i++) {
-            if ($i == $num - 1) {
+    } else {
+        for ($i = 0; $i < $repeat; $i++) {
+            if ($i == $repeat - 1) {
                 $txt .= "$text";
             } else {
                 $txt .= "$text$spacer";
             }
         }
         return $txt;
-    } else {
-        return "$txt $spacer $txt $spacer $txt $spacer";
     }
 }
 
