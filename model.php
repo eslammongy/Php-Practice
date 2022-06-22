@@ -106,3 +106,24 @@ function getStringLength($text)
         return $counter;
     }
 }
+
+function explodeString($text, string $spacer = " ")
+{
+    $arrayofTxt = array();
+    $currWord = "";
+    $txtLen = strlen($text);
+    if (empty($text)) {
+        return $arrayofTxt;
+    } else {
+        for ($i = 0; $i <= $txtLen - 1; $i++) {
+            if ($text[$i] === $spacer) {
+                $arrayofTxt[] = $currWord;
+                $currWord = "";
+            } else {
+                $currWord .= $text[$i];
+            }
+        }
+        $arrayofTxt[] = $currWord;
+        return $arrayofTxt;
+    }
+}

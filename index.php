@@ -8,7 +8,7 @@ include("model.php")
 <body>
 
     <?php
-    $txt = "Welcome There This Is My First Post Here";
+    $txt = "Welcome First Post";
 
     echo changeFirstCharState($txt, "lower");
     echo "<br>";
@@ -21,6 +21,8 @@ include("model.php")
     echo reverseString2("welcome");
     echo "<br>";
     echo getStringLength("welcome");
+    echo "<br>";
+    print_r(explodeString($txt, " "));
     ?>
 
 </body>
