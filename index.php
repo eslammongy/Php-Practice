@@ -14,8 +14,11 @@ include("model.php")
     echo "<br>";
     echo repeatStringText("Hello", 5, "**");
     echo "<br>";
-    echo convertStrToLowerCase($txt)
-
+    echo convertStrToLowerCase($txt);
+    echo "<br>";
+    echo reverseString("welcome");
+    echo "<br>";
+    echo reverseString2("welcome");
     ?>
 
 </body>

@@ -58,3 +58,36 @@ function convertStrToUpperCase($text)
         return $text;
     }
 }
+
+function reverseString($text): string
+{
+    $index = 0;
+    $txtLen = strlen($text);
+    if (empty($text)) {
+        return "<h2>Please Make Sure You Enter The Text</h2>";
+    } else {
+        for ($i = $txtLen - 1; $i >= 0; $i--) {
+            if ($i  >= $index) {
+                $temp = $text[$i];
+                $text[$i] = $text[$index];
+                $text[$index] = $temp;
+                $index++;
+            }
+        }
+        return $text;
+    }
+}
+function reverseString2($text): string
+{
+    $reveText = "";
+    $txtLen = strlen($text);
+    if (empty($text)) {
+        return "<h2>Please Make Sure You Enter The Text</h2>";
+    } else {
+        for ($i = $txtLen - 1; $i >= 0; $i--) {
+            // Hello
+            $reveText .= $text[$i];
+        }
+        return $reveText;
+    }
+}
