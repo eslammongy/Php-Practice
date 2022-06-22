@@ -111,7 +111,7 @@ function explodeString($text, string $spacer = " ")
 {
     $arrayofTxt = array();
     $currWord = "";
-    $txtLen = strlen($text);
+    $txtLen = getStringLength($text);
     if (empty($text)) {
         return $arrayofTxt;
     } else {
@@ -125,5 +125,24 @@ function explodeString($text, string $spacer = " ")
         }
         $arrayofTxt[] = $currWord;
         return $arrayofTxt;
+    }
+}
+function implodeString($arrayofTxt, string $spacer)
+{
+
+    $currWord = "";
+    $len = count($arrayofTxt);
+    if (empty($arrayofTxt)) {
+        return $arrayofTxt;
+    } else {
+        for ($i = 0; $i < count($arrayofTxt); $i++) {
+            if (empty($spacer)) {
+                $currWord .= $arrayofTxt[$i];
+            } else {
+                $currWord .= $arrayofTxt[$i] . $spacer;
+            }
+        }
+
+        return $currWord;
     }
 }

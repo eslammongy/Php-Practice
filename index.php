@@ -8,8 +8,8 @@ include("model.php")
 <body>
 
     <?php
-    $txt = "Welcome First Post";
-
+    $txt = "Welcome First Post ";
+    $arrayofTxt = ["welcome", "there", "first", "post"];
     echo changeFirstCharState($txt, "lower");
     echo "<br>";
     echo repeatStringText("Hello", 5, "**");
@@ -23,6 +23,9 @@ include("model.php")
     echo getStringLength("welcome");
     echo "<br>";
     print_r(explodeString($txt, " "));
+    echo "<br>";
+    echo implodeString($arrayofTxt, " ");
+
     ?>
 
 </body>
