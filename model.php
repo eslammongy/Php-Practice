@@ -91,3 +91,18 @@ function reverseString2($text): string
         return $reveText;
     }
 }
+function getStringLength($text)
+{
+    $counter = 0;
+    if (empty($text)) {
+        return "<h2>Please Make Sure You Enter The Text</h2>";
+    } else {
+        for ($i = 0; $i >= 0; $i++) {
+            if (!isset($text[$i])) {
+                break;
+            }
+            $counter++;
+        }
+        return $counter;
+    }
+}

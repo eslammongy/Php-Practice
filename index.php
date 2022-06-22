@@ -19,6 +19,8 @@ include("model.php")
     echo reverseString("welcome");
     echo "<br>";
     echo reverseString2("welcome");
+    echo "<br>";
+    echo getStringLength("welcome");
     ?>
 
 </body>
