@@ -8,7 +8,7 @@ include("model.php")
 <body>
 
     <?php
-    $txt = "Welcome First Post ";
+    $txt = "Welcome First Post";
     $arrayofTxt = ["welcome", "there", "first", "post"];
     echo changeFirstCharState($txt, "lower");
     echo "<br>";
@@ -25,6 +25,12 @@ include("model.php")
     print_r(explodeString($txt, " "));
     echo "<br>";
     echo implodeString($arrayofTxt, " ");
+    echo "<br>";
+    echo replaceString($txt, ["e" => "D", "s" => "B"]);
+    echo "<br>";
+    echo "<br>";
+    echo replaceString($txt, "W", "Y");
+
 
     ?>
 

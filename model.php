@@ -146,3 +146,28 @@ function implodeString($arrayofTxt, string $spacer)
         return $currWord;
     }
 }
+
+
+
+function replaceString($text, $str_from, $str_to = "")
+{
+    $txtLen = getStringLength($text);
+    if ($text != null &&  is_string($str_from) && $str_to != null) {
+        for ($i = 0; $i <= $txtLen - 1; $i++) {
+            if ($text[$i] == $str_from) {
+                $text[$i] = $str_to;
+            }
+        }
+
+        return $text;
+    } else if (is_array($str_from)) {
+        for ($i = 0; $i <= $txtLen - 1; $i++) {
+            //welcome
+            $current_str = $text[$i];
+            if (array_key_exists($current_str, $str_from)) {
+                $text[$i] = $str_from[$current_str];
+            }
+        }
+        return $text;
+    }
+}
